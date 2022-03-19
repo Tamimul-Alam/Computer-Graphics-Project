@@ -1,4 +1,4 @@
-#include<GL/gl.h>
+#include<GL/gl.h>//change
 #ifdef __APPLE__
 #include <GLUT/glut.h>
 #else
