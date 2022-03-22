@@ -14,7 +14,7 @@ static int stacks = 16;
 
 static void resize(int width, int height)
 {
-    const float ar = (float) width / (float) height;
+    const float ar = (float) width / (float) height;    //formula for translation
 
     glViewport(0, 0, width, height);
     glMatrixMode(GL_PROJECTION);
