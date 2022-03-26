@@ -8,7 +8,7 @@
 #include <GL/glut.h>
 #include<MMSystem.h>
 
-void PointLight(const float x, const float y, const float z,  const float amb, const float diff, const float spec);
+void PointLight(const float x, const float y, const float z,  const float amb, const float diff, const float spec);    ///Checked///
 void PointLight(const float x, const float y, const float z, const float amb, const float diff, const float spec)
 {
   glEnable(GL_LIGHTING);
