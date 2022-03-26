@@ -1,164 +1,108 @@
-#include<GL/gl.h>//change
-#ifdef __APPLE__
-#include <GLUT/glut.h>
-#else
+#include<cstdio>
+#include <windows.h>
+#include<math.h>
+#include <vector>
+#include <cstdlib>
+#define PI 3.14159265358979323846
+#include <GL/gl.h>
 #include <GL/glut.h>
-#endif
+#include<MMSystem.h>
 
-#include <stdlib.h>
-
-static int slices = 16;
-static int stacks = 16;
-
-/* GLUT callback Handlers */
-
-static void resize(int width, int height)
+void PointLight(const float x, const float y, const float z,  const float amb, const float diff, const float spec);
+void PointLight(const float x, const float y, const float z, const float amb, const float diff, const float spec)
 {
-    const float ar = (float) width / (float) height;    //formula for translation
-
-    glViewport(0, 0, width, height);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glFrustum(-ar, ar, -1.0, 1.0, 2.0, 100.0);
-
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity() ;
-}
-
-static void display(void)
-{
-    const double t = glutGet(GLUT_ELAPSED_TIME) / 1000.0;
-    const double a = t*90.0;
-
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glColor3d(1,0,0);
-
-    glPushMatrix();
-        glTranslated(-2.4,1.2,-6);
-        glRotated(60,1,0,0);
-        glRotated(a,0,0,1);
-        glutSolidSphere(1,slices,stacks);
-    glPopMatrix();
-
-    glPushMatrix();
-        glTranslated(0,1.2,-6);
-        glRotated(60,1,0,0);
-        glRotated(a,0,0,1);
-        glutSolidCone(1,1,slices,stacks);
-    glPopMatrix();
-
-    glPushMatrix();
-        glTranslated(2.4,1.2,-6);
-        glRotated(60,1,0,0);
-        glRotated(a,0,0,1);
-        glutSolidTorus(0.2,0.8,slices,stacks);
-    glPopMatrix();
-
-    glPushMatrix();
-        glTranslated(-2.4,-1.2,-6);
-        glRotated(60,1,0,0);
-        glRotated(a,0,0,1);
-        glutWireSphere(1,slices,stacks);
-    glPopMatrix();
-
-    glPushMatrix();
-        glTranslated(0,-1.2,-6);
-        glRotated(60,1,0,0);
-        glRotated(a,0,0,1);
-        glutWireCone(1,1,slices,stacks);
-    glPopMatrix();
-
-    glPushMatrix();
-        glTranslated(2.4,-1.2,-6);
-        glRotated(60,1,0,0);
-        glRotated(a,0,0,1);
-        glutWireTorus(0.2,0.8,slices,stacks);
-    glPopMatrix();
-
-    glutSwapBuffers();
+  glEnable(GL_LIGHTING);
+  GLfloat light_ambient[] = { amb,amb,amb, 1.0 };
+  GLfloat light_position[] = {-0.9,.9,0, 0.0 };
+  glLightfv(GL_LIGHT0, GL_AMBIENT, light_ambient);
+  glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+  glEnable(GL_LIGHT0); //enable the light after setting the properties
 }
 
 
-static void key(unsigned char key, int x, int y)
+GLfloat position2 = 0.0f;
+GLfloat speed2 =-0.01f;
+void sunn(int value)
 {
-    switch (key)
-    {
-        case 27 :
-        case 'q':
-            exit(0);
-            break;
+   if(position2 > 1.0)
+        position2 = 0.0f;
 
-        case '+':
-            slices++;
-            stacks++;
-            break;
+    position2 += speed2;
 
-        case '-':
-            if (slices>3 && stacks>3)
-            {
-                slices--;
-                stacks--;
-            }
-            break;
-    }
+	glutPostRedisplay();
 
-    glutPostRedisplay();
+	glutTimerFunc(100, sunn, 0);
 }
 
-static void idle(void)
+
+void sun()
 {
-    glutPostRedisplay();
+    int i;
+
+	GLfloat x=.0f; GLfloat y=16.0f; GLfloat radius =2.0f;
+	int triangleAmount = 20;
+	GLfloat twicePi = 2.0f * PI;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(255, 204, 0);
+		glVertex2f(x, y); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            x + (radius * cos(i *  twicePi / triangleAmount)),
+			    y + (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+}
+void sky(){
+	glBegin(GL_QUADS);
+    glColor3ub(51, 204, 255);
+	glVertex2f(-20.0f, 20.0f);
+	glVertex2f(-20.0f, 6.0f);
+	glVertex2f(20.0f, 6.0f);
+	glVertex2f(20.0f, 20.0f);
+
+	glEnd();
+}
+void river() {
+
+
+	glBegin(GL_QUADS);
+    glColor3ub(19,112,194);
+	glVertex2f(-20.0f, -20.0f);
+	glVertex2f(-20.0f, 6.0f);
+	glVertex2f(20.0f, 6.0f);
+	glVertex2f(20.0f, -20.0f);
+
+	glEnd();
+
+
+}
+void display() {
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	glLineWidth(2);
+
+    sky();
+    river();
+    glPushMatrix();
+    sun();
+    glPopMatrix();
+    glFlush();
+	glutSwapBuffers();
 }
 
-const GLfloat light_ambient[]  = { 0.0f, 0.0f, 0.0f, 1.0f };
-const GLfloat light_diffuse[]  = { 1.0f, 1.0f, 1.0f, 1.0f };
-const GLfloat light_specular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-const GLfloat light_position[] = { 2.0f, 5.0f, 5.0f, 0.0f };
-
-const GLfloat mat_ambient[]    = { 0.7f, 0.7f, 0.7f, 1.0f };
-const GLfloat mat_diffuse[]    = { 0.8f, 0.8f, 0.8f, 1.0f };
-const GLfloat mat_specular[]   = { 1.0f, 1.0f, 1.0f, 1.0f };
-const GLfloat high_shininess[] = { 100.0f };
-
-/* Program entry point */
-
-int main(int argc, char *argv[])
-{
-    glutInit(&argc, argv);
-    glutInitWindowSize(640,480);
-    glutInitWindowPosition(10,10);
-    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-
-    glutCreateWindow("GLUT Shapes");
-
-    glutReshapeFunc(resize);
-    glutDisplayFunc(display);
-    glutKeyboardFunc(key);
-    glutIdleFunc(idle);
-
-    glClearColor(1,1,1,1);
-    glEnable(GL_CULL_FACE);
-    glCullFace(GL_BACK);
-
-    glEnable(GL_DEPTH_TEST);
-    glDepthFunc(GL_LESS);
-
-    glEnable(GL_LIGHT0);
-    glEnable(GL_NORMALIZE);
-    glEnable(GL_COLOR_MATERIAL);
-    glEnable(GL_LIGHTING);
-
-    glLightfv(GL_LIGHT0, GL_AMBIENT,  light_ambient);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE,  light_diffuse);
-    glLightfv(GL_LIGHT0, GL_SPECULAR, light_specular);
-    glLightfv(GL_LIGHT0, GL_POSITION, light_position);
-
-    glMaterialfv(GL_FRONT, GL_AMBIENT,   mat_ambient);
-    glMaterialfv(GL_FRONT, GL_DIFFUSE,   mat_diffuse);
-    glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular);
-    glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess);
-
-    glutMainLoop();
-
-    return EXIT_SUCCESS;
+//Main function: GLUT runs as a console application starting at main()
+int main(int argc, char** argv) {
+	glutInit(&argc, argv);
+	glutInitWindowSize(900,900);
+	glutInitWindowPosition(50,50);       // Initialize GLUT
+	glutCreateWindow("");  // Create window with the given title
+	glutDisplayFunc(display);
+    gluOrtho2D(-20,20,-20,20);
+	glutTimerFunc(100, sunn, 0);
+	glutMainLoop();                 // Enter the event-processing loop
+	return 0;
 }
