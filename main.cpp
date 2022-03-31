@@ -78,6 +78,50 @@ void river() {
 
 
 }
+
+void hill(){                                //hills created
+
+	glBegin(GL_TRIANGLES);
+	glColor3ub(128, 128, 0);
+	glVertex2f(-20.0f,4.0f);
+	glVertex2f(-12.0f,10.0f);
+	glVertex2f(-4.0f, 4.0f);
+
+	glEnd();
+
+    glBegin(GL_TRIANGLES);
+	glColor3ub(128, 128, 0);
+	glVertex2f(-10.1f,4.0f);
+	glVertex2f(-3.0f,10.0f);
+	glVertex2f(8.0f, 4.0f);
+
+	glEnd();
+
+	glBegin(GL_TRIANGLES);
+	glColor3ub(128, 128, 0);
+	glVertex2f(-4.0f,4.0f);
+	glVertex2f(2.0f,10.0f);
+	glVertex2f(9.0f, 4.0f);
+
+	glEnd();
+
+	glBegin(GL_TRIANGLES);
+	glColor3ub(128, 128, 0);
+	glVertex2f(20.0f,4.0f);
+	glVertex2f(15.0f,10.0f);
+	glVertex2f(9.0f, 4.0f);
+
+	glEnd();
+
+    glBegin(GL_TRIANGLES);
+	glColor3ub(128, 128, 0);
+	glVertex2f(18.0f,5.0f);
+	glVertex2f(10.0f,8.0f);
+	glVertex2f(5.0f, 3.0f);
+
+	glEnd();
+}
+
 void display() {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -86,6 +130,7 @@ void display() {
 	glLineWidth(2);
 
     sky();
+    hill();
     river();
     glPushMatrix();
     sun();
