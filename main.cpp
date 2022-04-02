@@ -79,7 +79,7 @@ void river() {
 
 }
 
-/*void ground(){      //Ground Created Date: 02/04/22
+void ground(){      //Ground Created Date: 02/04/22
 
 	glBegin(GL_TRIANGLES);
 	glColor3ub(102, 255, 51);
@@ -107,7 +107,7 @@ void river() {
 
 	glEnd();
 }
-*/
+
 void hill(){                                //hills created
 
 	glBegin(GL_TRIANGLES);
@@ -161,7 +161,7 @@ void display() {
     sky();
     hill();
     river();
-    //ground();
+    ground();
     glPushMatrix();
     sun();
     glPopMatrix();
