@@ -79,6 +79,35 @@ void river() {
 
 }
 
+/*void ground(){      //Ground Created Date: 02/04/22
+
+	glBegin(GL_TRIANGLES);
+	glColor3ub(102, 255, 51);
+	glVertex2f(0.0f,0.0f);
+	glVertex2f(4.0f,-5.0f);
+	glVertex2f(0.0f, -10.0f);
+
+	glEnd();
+
+    glBegin(GL_QUADS);
+	glColor3ub(102, 255, 51);
+	glVertex2f(-20.0f, 0.0f);
+	glVertex2f(0.0f, 0.0f);
+	glVertex2f(0.0f, -20.0f);
+	glVertex2f(-20.0f,-20.0f);
+
+	glEnd();
+
+
+	glBegin(GL_TRIANGLES);
+	glColor3ub(102, 255, 51);
+	glVertex2f(0.0f,-20.0f);
+	glVertex2f(4.0f,-15.0f);
+	glVertex2f(0.0f, -10.0f);
+
+	glEnd();
+}
+*/
 void hill(){                                //hills created
 
 	glBegin(GL_TRIANGLES);
@@ -132,6 +161,7 @@ void display() {
     sky();
     hill();
     river();
+    //ground();
     glPushMatrix();
     sun();
     glPopMatrix();
