@@ -283,6 +283,60 @@ void sky2()
 	glVertex2f(-1.0f, 1.0f);
     glEnd();
 }
+
+void hill()
+{
+
+    glBegin(GL_TRIANGLES);
+    glColor3ub(34, 139, 34);
+    glVertex2f(0.6f,0.4f);
+    glVertex2f(0.4f,0.6f);
+    glVertex2f(-4.0f, -4.0f);
+
+    glEnd();
+
+    glBegin(GL_TRIANGLES);
+    glColor3ub(34, 139, 34);
+    glVertex2f(0.4f,0.4f);
+    glVertex2f(0.3f,0.4f);
+    glVertex2f(-4.0f, -4.0f);
+
+    glEnd();
+
+
+   glBegin(GL_TRIANGLES);
+    glColor3ub(34, 139, 34);
+    glVertex2f(-1.0f,0.45f);
+    glVertex2f(-0.75f, 0.67);
+    glVertex2f(-0.5f,0.45f);
+
+    glEnd();
+
+    glBegin(GL_TRIANGLES); //middle
+    glColor3ub(34, 139, 34);
+    glVertex2f(-0.25f,0.45f);
+    glVertex2f(0.07f, 0.75);
+    glVertex2f(.25f,0.45f);
+
+    glEnd();
+
+	glBegin(GL_TRIANGLES); //last
+	glColor3ub(34, 139, 34);
+	glVertex2f(1.0f, 0.45f);
+    glVertex2f(0.75f, 0.67f);
+    glVertex2f(0.5f, 0.45f);
+	glEnd();
+
+
+	glBegin(GL_TRIANGLES);
+	glColor3ub(34, 139, 34);
+	glVertex2f(-0.5f,0.45f);
+    glVertex2f(-0.37f, 0.62);///
+    glVertex2f(-0.25f,0.45f);
+    glEnd();
+
+}
+
 void stars()
 {
     glPointSize( 2.5 );
@@ -510,7 +564,7 @@ void StartingText()
         }
         else glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_10, text[i]);
     }
-        sprintf(text,"  Tamimul Alam",5.00,8.00);
+        sprintf(text,"  Tamim & Sajid",5.00,8.00);
     glColor3f(0, 0, 0);
     glRasterPos2f( -100 , 0 );
     for(int i = 0; text[i] != '\0'; i++)
@@ -539,13 +593,14 @@ void DrawSphere()
     cloud3();
     glPopMatrix();
     moon();
-    //sun();
+
 
     ground();
     river();
+    hill();
     glPushMatrix();
 
-    sun();
+
     glPopMatrix();
     stars();
     sky2();
@@ -584,6 +639,7 @@ void display1(void)
     cloud1();
     cloud2();
     cloud3();
+    hill();
 
     river();
     ground();
@@ -625,6 +681,7 @@ void display() {
 
 
     glPopMatrix();
+    hill();
 
     river();
     glPushMatrix();
@@ -677,7 +734,7 @@ void handleKeypress(unsigned char key, int x, int y) {
 	        glutDestroyWindow(1);
 	        glutInitWindowSize(1240, 750);
             glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH)-1240)/2,(glutGet(GLUT_SCREEN_HEIGHT)-750)/2);
-            glutCreateWindow("Soothing Scenary of A Village");
+            glutCreateWindow("Day View");
             glutKeyboardFunc(handleKeypress);
             glutDisplayFunc(display);
 
@@ -688,7 +745,7 @@ void handleKeypress(unsigned char key, int x, int y) {
             glutDestroyWindow(1);
 	        glutInitWindowSize(1240, 750);
             glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH)-1240)/2,(glutGet(GLUT_SCREEN_HEIGHT)-750)/2);
-            glutCreateWindow("village scenario");
+            glutCreateWindow("Night View");
             glutKeyboardFunc(handleKeypress);
             glutDisplayFunc(display2);
 
@@ -698,7 +755,7 @@ void handleKeypress(unsigned char key, int x, int y) {
 	        glutDestroyWindow(1);
 	        glutInitWindowSize(1240, 750);
             glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH)-1240)/2,(glutGet(GLUT_SCREEN_HEIGHT)-750)/2);
-            glutCreateWindow("village scenario");
+            glutCreateWindow("Soothing Scenary of A Village");
             glutKeyboardFunc(handleKeypress);
             glutDisplayFunc(display);
 
