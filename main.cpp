@@ -1159,6 +1159,61 @@ void grass3()
     glEnd();
 
 }
+void fence() // fence created
+{
+     glLineWidth(4);
+     glBegin(GL_LINES);
+    glColor3ub(255, 255, 102);
+    glVertex2f(-1.0f,-0.1f);
+    glVertex2f(-0.6f,-0.1f);
+
+    glColor3ub(255, 255, 102);
+    glVertex2f(-1.0f,-0.05f);
+    glVertex2f(-0.6f,-0.05f);
+
+    glColor3ub(255, 255, 102);
+    glVertex2f(-1.0f,0.0f);
+    glVertex2f(-0.6f,0.0f);
+
+     glColor3ub(255, 255, 102);
+    glVertex2f(-1.0f,0.05f);
+    glVertex2f(-0.6f,0.05f);
+
+     glColor3ub(255, 255, 102);
+    glVertex2f(-1.0f,0.1f);
+    glVertex2f(-0.6f,0.1f);
+
+     glColor3ub(255, 255, 102);
+    glVertex2f(-0.95f,0.13f);
+    glVertex2f(-0.95f,-0.12f);
+
+    glColor3ub(255, 255, 102);
+    glVertex2f(-0.9f,0.13f);
+    glVertex2f(-0.9f,-0.12f);
+
+    glColor3ub(255, 255, 102);
+    glVertex2f(-0.85f,0.13f);
+    glVertex2f(-0.85f,-0.12f);
+
+    glColor3ub(255, 255, 102);
+    glVertex2f(-0.8f,0.13f);
+    glVertex2f(-0.8f,-0.12f);
+
+    glColor3ub(255, 255, 102);
+    glVertex2f(-0.75f,0.13f);
+    glVertex2f(-0.75f,-0.12f);
+
+    glColor3ub(255, 255, 102);
+    glVertex2f(-0.7f,0.13f);
+    glVertex2f(-0.7f,-0.12f);
+
+    glColor3ub(255, 255, 102);
+    glVertex2f(-0.65f,0.13f);
+    glVertex2f(-0.65f,-0.12f);
+
+    glEnd();
+}
+
 
 void grass4()   /// Fence should be start before grass4; Grass 4-6 for Night View
 {
@@ -1482,6 +1537,7 @@ void DrawSphere()
     boat4();
     boat3();
     hut1();
+    fence();
     grass4();
     grass5();
     grass6();
@@ -1536,6 +1592,7 @@ void display1(void)
     grass3();
     way();
     boat2();
+    fence();
     ground();
     well();
     hut();
@@ -1586,6 +1643,7 @@ void display() {
     grass3();
     way();
     boat2();
+    fence();
     well();
     hut();
 	glFlush();
