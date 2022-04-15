@@ -1092,6 +1092,325 @@ void way()
 
 
 }
+void grass1()     //grass 1-3 for day view
+{
+     glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(0, 102, 0);
+	glVertex2f(-.05f, -0.35f);
+	glVertex2f(-0.0f, -0.4f);//
+	glVertex2f(0.05f, -0.35f);
+	glVertex2f(0.0f, -0.4f);//
+	glVertex2f(0.027f, -0.33f);
+	glVertex2f(0.0f, -0.4f);//
+	glVertex2f(-0.027f, -0.33f);
+	glVertex2f(0.0f, -0.4f);//
+	glVertex2f(0.0f, -0.3f);
+	glVertex2f(0.0f, -0.4f);//
+	glVertex2f(-0.075f, -0.37f);
+	glVertex2f(-0.0f, -0.4f);//
+	glVertex2f(0.0745f, -0.37f);
+	glVertex2f(-0.0f, -0.4f);//
+    glEnd();
+}
+
+void grass2()
+{
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(0, 102, 0);
+	glVertex2f(-.05f, -0.65f);
+	glVertex2f(-0.0f, -0.7f);
+	glVertex2f(0.05f, -0.65f);
+	glVertex2f(0.0f, -0.7f);
+	glVertex2f(0.027f, -0.62f);
+	glVertex2f(0.0f, -0.7f);
+	glVertex2f(-0.027f, -0.62f);
+	glVertex2f(0.0f, -0.7f);
+	glVertex2f(-0.0f, -0.6f);
+	glVertex2f(0.0f, -0.7f);
+	glVertex2f(-0.075f, -0.67f);
+	glVertex2f(-0.0f, -0.7f);
+	glVertex2f(0.075f, -0.67f);
+	glVertex2f(-0.0f, -0.7f);
+    glEnd();
+
+
+}
+void grass3()
+{
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(0, 102, 0);
+	glVertex2f(-.85f, -0.75f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.75f, -0.75f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.827f, -0.72f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.773f, -0.72f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.8f, -0.7f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.725f, -0.77f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.875f, -0.77f);
+	glVertex2f(-0.8f, -0.8f);
+    glEnd();
+
+}
+
+void grass4()   /// Fence should be start before grass4; Grass 4-6 for Night View
+{
+
+	glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(0, 102, 0);
+	glVertex2f(-.05f, -0.35f);
+	glVertex2f(-0.0f, -0.4f);//
+	glVertex2f(0.05f, -0.35f);
+	glVertex2f(0.0f, -0.4f);//
+	glVertex2f(0.027f, -0.33f);
+	glVertex2f(0.0f, -0.4f);//
+	glVertex2f(-0.027f, -0.33f);
+	glVertex2f(0.0f, -0.4f);//
+	glVertex2f(0.0f, -0.3f);
+	glVertex2f(0.0f, -0.4f);//
+	glVertex2f(-0.075f, -0.37f);
+	glVertex2f(-0.0f, -0.4f);//
+	glVertex2f(0.0745f, -0.37f);
+	glVertex2f(-0.0f, -0.4f);//
+    glEnd();
+}
+void grass5()
+{
+    glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(0, 102, 0);
+	glVertex2f(-.05f, -0.65f);
+	glVertex2f(-0.0f, -0.7f);
+	glVertex2f(0.05f, -0.65f);
+	glVertex2f(0.0f, -0.7f);
+	glVertex2f(0.027f, -0.62f);
+	glVertex2f(0.0f, -0.7f);
+	glVertex2f(-0.027f, -0.62f);
+	glVertex2f(0.0f, -0.7f);
+	glVertex2f(-0.0f, -0.6f);
+	glVertex2f(0.0f, -0.7f);
+	glVertex2f(-0.075f, -0.67f);
+	glVertex2f(-0.0f, -0.7f);
+	glVertex2f(0.075f, -0.67f);
+	glVertex2f(-0.0f, -0.7f);
+    glEnd();
+}
+
+void grass6()
+{
+
+	glLineWidth(4);
+    glBegin(GL_LINES);
+    glColor3ub(0, 102, 0);
+	glVertex2f(-.85f, -0.75f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.75f, -0.75f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.827f, -0.72f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.773f, -0.72f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.8f, -0.7f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.725f, -0.77f);
+	glVertex2f(-0.8f, -0.8f);
+	glVertex2f(-0.875f, -0.77f);
+	glVertex2f(-0.8f, -0.8f);
+    glEnd();
+}
+
+void well()              //Well for Day View
+{
+
+glBegin(GL_POLYGON);
+    glColor3ub(184, 134, 11);
+    glVertex2f(-0.9f,-0.35f);
+    glVertex2f(-0.9f,-0.55f);
+    glVertex2f(-0.85f,-0.575f);
+    glVertex2f(-0.8f,-0.59f);
+    glVertex2f(-0.7f,-0.59f);
+    glVertex2f(-0.65f,-0.575f);
+    glVertex2f(-0.6f,-0.55f);
+    glVertex2f(-0.6f,-0.35f);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(38, 154, 214);
+    glVertex2f(-0.9f,-0.35f);
+    glVertex2f(-0.85f,-0.375f);
+    glVertex2f(-0.8f,-0.38f);
+    glVertex2f(-0.7f,-0.38f);
+    glVertex2f(-0.65f,-0.375f);
+    glVertex2f(-0.6f,-0.35f);
+    glVertex2f(-0.65f,-0.33f);
+    glVertex2f(-0.7f,-0.325f);
+     glVertex2f(-0.8f,-0.325f);
+     glVertex2f(-0.85f,-0.33f);
+    glEnd();
+
+    glLineWidth(5);
+     glBegin(GL_LINES);
+     glColor3ub(184, 134, 11);
+     glVertex2f(-0.9f,-0.35f);
+    glVertex2f(-0.85f,-0.33f);//
+    glVertex2f(-0.85f,-0.33f);
+    glVertex2f(-0.8f,-0.325f);//
+    glVertex2f(-0.8f,-0.325f);
+    glVertex2f(-0.7f,-0.325f);//
+    glVertex2f(-0.7f,-0.325f);
+    glVertex2f(-0.65f,-0.33f);//
+     glVertex2f(-0.65f,-0.33f);
+     glVertex2f(-0.6f,-0.35f);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(194, 194, 163);
+    glVertex2f(-0.59f,-0.43f);
+    glVertex2f(-0.57f,-0.5f);
+    glVertex2f(-0.52f,-0.5f);
+    glVertex2f(-0.5f,-0.43f);
+    glVertex2f(-0.52f,-0.42f);
+    glVertex2f(-0.57f,-0.42f);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(38, 154, 214);
+    glVertex2f(-0.585f,-0.43f);
+    glVertex2f(-0.568f,-0.44f);
+    glVertex2f(-0.528f,-0.44f);
+    glVertex2f(-0.505f,-0.43f);
+    glVertex2f(-0.528f,-0.425f);
+    glVertex2f(-0.57f,-0.425f);
+    glEnd();
+
+    glLineWidth(3);
+     glBegin(GL_LINES);
+    glColor3ub(194, 194, 163);
+    glVertex2f(-0.59f,-0.43f);
+    glVertex2f(-0.57f,-0.39f);//
+    glVertex2f(-0.57f,-0.39f);
+    glVertex2f(-0.55f,-0.39f);//
+    glVertex2f(-0.55f,-0.39f);
+    glVertex2f(-0.52f,-0.39f);//
+    glVertex2f(-0.52f,-0.39f);
+    glVertex2f(-0.5f,-0.43f);//
+    glEnd();
+
+    glLineWidth(2.5);
+     glBegin(GL_LINES);
+    glColor3ub(230, 172, 0);
+    glVertex2f(-0.545f,-0.385f);
+    glVertex2f(-0.57f,-0.45f);//
+    glVertex2f(-0.57f,-0.45f);
+    glVertex2f(-0.575f,-0.5f);//
+    glVertex2f(-0.575f,-0.5f);
+    glVertex2f(-0.58f,-0.53f);//
+    glVertex2f(-0.58f,-0.53f);
+    glVertex2f(-0.57f,-0.55f);//
+    glVertex2f(-0.57f,-0.55f);
+    glVertex2f(-0.48f,-0.53f);//
+    glEnd();
+}
+
+void well1()            //Well for Night View
+{
+
+     glLineWidth(5);
+     glBegin(GL_LINES);
+    glColor3ub(184, 134, 11);
+     glVertex2f(-0.9f,-0.35f);
+    glVertex2f(-0.85f,-0.33f);//
+    glVertex2f(-0.85f,-0.33f);
+    glVertex2f(-0.8f,-0.325f);//
+    glVertex2f(-0.8f,-0.325f);
+    glVertex2f(-0.7f,-0.325f);//
+    glVertex2f(-0.7f,-0.325f);
+    glVertex2f(-0.65f,-0.33f);//
+     glVertex2f(-0.65f,-0.33f);
+     glVertex2f(-0.6f,-0.35f);
+    glEnd();
+
+    glLineWidth(3);
+     glBegin(GL_LINES);
+    glColor3ub(194, 194, 163);
+    glVertex2f(-0.59f,-0.43f);
+    glVertex2f(-0.57f,-0.39f);//
+    glVertex2f(-0.57f,-0.39f);
+    glVertex2f(-0.55f,-0.39f);//
+    glVertex2f(-0.55f,-0.39f);
+    glVertex2f(-0.52f,-0.39f);//
+    glVertex2f(-0.52f,-0.39f);
+    glVertex2f(-0.5f,-0.43f);//
+    glEnd();
+
+    glLineWidth(2.5);
+     glBegin(GL_LINES);
+    glColor3ub(230, 172, 0);
+    glVertex2f(-0.545f,-0.385f);
+    glVertex2f(-0.57f,-0.45f);//
+    glVertex2f(-0.57f,-0.45f);
+    glVertex2f(-0.575f,-0.5f);//
+    glVertex2f(-0.575f,-0.5f);
+    glVertex2f(-0.58f,-0.53f);//
+    glVertex2f(-0.58f,-0.53f);
+    glVertex2f(-0.57f,-0.55f);//
+    glVertex2f(-0.57f,-0.55f);
+    glVertex2f(-0.48f,-0.53f);//
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(38, 154, 214);
+    glVertex2f(-0.585f,-0.43f);
+    glVertex2f(-0.568f,-0.44f);
+    glVertex2f(-0.528f,-0.44f);
+    glVertex2f(-0.505f,-0.43f);
+    glVertex2f(-0.528f,-0.425f);
+    glVertex2f(-0.57f,-0.425f);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(184, 134, 11);
+    glVertex2f(-0.9f,-0.35f);
+    glVertex2f(-0.9f,-0.55f);
+    glVertex2f(-0.85f,-0.575f);
+    glVertex2f(-0.8f,-0.59f);
+    glVertex2f(-0.7f,-0.59f);
+    glVertex2f(-0.65f,-0.575f);
+    glVertex2f(-0.6f,-0.55f);
+    glVertex2f(-0.6f,-0.35f);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3ub(38, 154, 214);
+    glVertex2f(-0.9f,-0.35f);
+    glVertex2f(-0.85f,-0.375f);
+    glVertex2f(-0.8f,-0.38f);
+    glVertex2f(-0.7f,-0.38f);
+    glVertex2f(-0.65f,-0.375f);
+    glVertex2f(-0.6f,-0.35f);
+    glVertex2f(-0.65f,-0.33f);
+    glVertex2f(-0.7f,-0.325f);
+     glVertex2f(-0.8f,-0.325f);
+     glVertex2f(-0.85f,-0.33f);
+    glEnd();
+    glBegin(GL_POLYGON);
+    glColor3ub(194, 194, 163);
+    glVertex2f(-0.59f,-0.43f);
+    glVertex2f(-0.57f,-0.5f);
+    glVertex2f(-0.52f,-0.5f);
+    glVertex2f(-0.5f,-0.43f);
+    glVertex2f(-0.52f,-0.42f);
+    glVertex2f(-0.57f,-0.42f);
+    glEnd();
+}
 void StartingText()
 {
     char text[120];
@@ -1163,7 +1482,11 @@ void DrawSphere()
     boat4();
     boat3();
     hut1();
+    grass4();
+    grass5();
+    grass6();
     way();
+    well1();
     ground();
     river();
     hill();
@@ -1208,9 +1531,13 @@ void display1(void)
     cloud3();
     hill();
     river();
+    grass1();
+    grass2();
+    grass3();
     way();
     boat2();
     ground();
+    well();
     hut();
     glOrtho(-50, 50, -50, 50, -1, 1);
     glMatrixMode(GL_MODELVIEW);
@@ -1254,8 +1581,12 @@ void display() {
     boat();
     glPopMatrix();
     ground();
+    grass1();
+    grass2();
+    grass3();
     way();
     boat2();
+    well();
     hut();
 	glFlush();
 	glutSwapBuffers();
