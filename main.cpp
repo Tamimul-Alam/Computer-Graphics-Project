@@ -8,7 +8,7 @@
 #include <GL/glut.h>
 #include<MMSystem.h>
 
-void PointLight(const float x, const float y, const float z,  const float amb, const float diff, const float spec);    ///Checked///
+void PointLight(const float x, const float y, const float z,  const float amb, const float diff, const float spec);
 void PointLight(const float x, const float y, const float z, const float amb, const float diff, const float spec)
 {
   glEnable(GL_LIGHTING);
@@ -850,6 +850,225 @@ void hut1()
     glVertex2f(-0.17f,-0.2f);
     glEnd();
 }
+void tree()                          //tree created
+{
+    glBegin(GL_POLYGON);
+    glColor3ub(102, 51, 0);
+    glVertex2f(-0.72f,-0.15f);
+    glVertex2f(-0.65f,-0.2f);
+    glVertex2f(-0.735f,-0.17f);
+    glVertex2f(-0.74f,-0.25f);
+    glVertex2f(-0.775f,-0.17f);
+    glVertex2f(-0.85f,-0.2f);
+    glVertex2f(-0.78f,-0.15f);
+    glEnd();
+
+    glBegin(GL_QUADS);
+    glColor3ub(102, 51, 0);
+    glVertex2f(-0.78f,-0.15f);
+    glVertex2f(-0.78f,0.23f);
+    glVertex2f(-0.72f,0.23f);
+    glVertex2f(-0.72f,-0.15f);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(102, 51, 0);
+    glVertex2f(-0.76f,0.23f);
+    glVertex2f(-0.76f,0.3f);
+    glVertex2f(-0.74f,0.3f);
+    glVertex2f(-0.74f,0.23f);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(102, 51, 0);
+    glVertex2f(-0.74f,0.23f);
+    glVertex2f(-0.71f,0.29f);
+    glVertex2f(-0.7f,0.28f);
+    glVertex2f(-0.72f,0.23f);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3ub(102, 51, 0);
+    glVertex2f(-0.78f,0.23f);
+    glVertex2f(-0.8f,0.28f);
+    glVertex2f(-0.79f,0.29f);
+    glVertex2f(-0.76f,0.23f);
+    glEnd();
+
+     int i;
+
+	GLfloat x=-.75f; GLfloat y=.33f; GLfloat radius =.06f;
+	int triangleAmount = 20;
+	GLfloat twicePi = 2.0f * PI;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(x, y); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            x + (radius * cos(i *  twicePi / triangleAmount)),
+			    y + (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+
+GLfloat a=-.68f; GLfloat b=.31f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(a, b); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            a + (radius * cos(i *  twicePi / triangleAmount)),
+			    b + (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+
+	GLfloat c=-.81f; GLfloat d=.31f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(c, d); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            c + (radius * cos(i *  twicePi / triangleAmount)),
+			    d + (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+
+	GLfloat e=-.87f; GLfloat f=.35f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(e, f); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            e + (radius * cos(i *  twicePi / triangleAmount)),
+			    f+ (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+
+	GLfloat g=-.61f; GLfloat h=.35f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(g, h); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            g + (radius * cos(i *  twicePi / triangleAmount)),
+			    h+ (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+	GLfloat a1=-.61f; GLfloat b1=.4f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(a1, b1); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            a1 + (radius * cos(i *  twicePi / triangleAmount)),
+			    b1 + (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+
+	GLfloat c1=-.88f; GLfloat d1=.4f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(c, d); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            c1 + (radius * cos(i *  twicePi / triangleAmount)),
+			    d1 + (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+
+	GLfloat e1=-.87f; GLfloat f1=.44f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(e1, f1); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            e1 + (radius * cos(i *  twicePi / triangleAmount)),
+			    f1+ (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+
+	GLfloat g1=-.61f; GLfloat h1=.4f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(g, h); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            g1 + (radius * cos(i *  twicePi / triangleAmount)),
+			    h1+ (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+	GLfloat e11=-.64f; GLfloat f11=.44f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(e11, f11); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            e11 + (radius * cos(i *  twicePi / triangleAmount)),
+			    f11+ (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+
+	GLfloat e12=-.75f; GLfloat f12=.44f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(e12, f12); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            e12 + (radius * cos(i *  twicePi / triangleAmount)),
+			    f12+ (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+	 glBegin(GL_QUADS);
+    glColor3ub(51, 204, 51);
+    glVertex2f(-0.85f,0.33f);
+    glVertex2f(-0.85f,0.44f);
+    glVertex2f(-0.65f,0.44f);
+    glVertex2f(-0.65f,0.33f);
+    glEnd();
+
+    GLfloat e123=-.8f; GLfloat f123=.5f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(e123, f123); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            e123 + (radius * cos(i *  twicePi / triangleAmount)),
+			    f123+ (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+	GLfloat e1232=-.7f; GLfloat f1232=.5f;
+
+	glBegin(GL_TRIANGLE_FAN);
+	    glColor3ub(51, 204, 51);
+		glVertex2f(e1232, f1232); // center of circle
+		for(i = 0; i <= triangleAmount;i++) {
+			glVertex2f(
+		            e1232 + (radius * cos(i *  twicePi / triangleAmount)),
+			    f1232+ (radius * sin(i * twicePi / triangleAmount))
+			);
+		}
+	glEnd();
+}
 void boat()
 {
     glBegin(GL_POLYGON);//Day boat
@@ -1054,7 +1273,7 @@ void boat4()
     glVertex2f(0.65f, -0.25f);
     glEnd();
 
-	glBegin(GL_POLYGON);
+	/*glBegin(GL_POLYGON);        //Sailor set down for Night View
 	glColor3ub(240, 106, 106);
 	glVertex2f(0.462f, -0.08f);
 	glVertex2f(0.462f, 0.08f);
@@ -1062,7 +1281,7 @@ void boat4()
 	glVertex2f(0.564f, 0.08f);
 	glVertex2f(0.565f, 0.06f);
     glVertex2f(0.565f, -0.1f);
-    glEnd();
+    glEnd();*/
 
     glBegin(GL_POLYGON);
 	glColor3ub(136,204,0);
@@ -1137,6 +1356,7 @@ void grass2()
 
 
 }
+
 void grass3()
 {
     glLineWidth(4);
@@ -1159,7 +1379,7 @@ void grass3()
     glEnd();
 
 }
-void fence() // fence created
+void fence()         // fence created
 {
      glLineWidth(4);
      glBegin(GL_LINES);
@@ -1215,7 +1435,7 @@ void fence() // fence created
 }
 
 
-void grass4()   /// Fence should be start before grass4; Grass 4-6 for Night View
+void grass4()   //Grass 4-6 for Night View
 {
 
 	glLineWidth(4);
@@ -1359,7 +1579,7 @@ glBegin(GL_POLYGON);
     glVertex2f(-0.5f,-0.43f);//
     glEnd();
 
-    glLineWidth(2.5);
+    glLineWidth(2.5);              //Bucket rope for day view
      glBegin(GL_LINES);
     glColor3ub(230, 172, 0);
     glVertex2f(-0.545f,-0.385f);
@@ -1382,13 +1602,13 @@ void well1()            //Well for Night View
      glBegin(GL_LINES);
     glColor3ub(184, 134, 11);
      glVertex2f(-0.9f,-0.35f);
-    glVertex2f(-0.85f,-0.33f);//
     glVertex2f(-0.85f,-0.33f);
-    glVertex2f(-0.8f,-0.325f);//
+    glVertex2f(-0.85f,-0.33f);
     glVertex2f(-0.8f,-0.325f);
-    glVertex2f(-0.7f,-0.325f);//
+    glVertex2f(-0.8f,-0.325f);
     glVertex2f(-0.7f,-0.325f);
-    glVertex2f(-0.65f,-0.33f);//
+    glVertex2f(-0.7f,-0.325f);
+    glVertex2f(-0.65f,-0.33f);
      glVertex2f(-0.65f,-0.33f);
      glVertex2f(-0.6f,-0.35f);
     glEnd();
@@ -1397,28 +1617,28 @@ void well1()            //Well for Night View
      glBegin(GL_LINES);
     glColor3ub(194, 194, 163);
     glVertex2f(-0.59f,-0.43f);
-    glVertex2f(-0.57f,-0.39f);//
     glVertex2f(-0.57f,-0.39f);
-    glVertex2f(-0.55f,-0.39f);//
+    glVertex2f(-0.57f,-0.39f);
     glVertex2f(-0.55f,-0.39f);
-    glVertex2f(-0.52f,-0.39f);//
+    glVertex2f(-0.55f,-0.39f);
     glVertex2f(-0.52f,-0.39f);
-    glVertex2f(-0.5f,-0.43f);//
+    glVertex2f(-0.52f,-0.39f);
+    glVertex2f(-0.5f,-0.43f);
     glEnd();
 
-    glLineWidth(2.5);
+    glLineWidth(2.5);       //bucket rope for night view
      glBegin(GL_LINES);
     glColor3ub(230, 172, 0);
     glVertex2f(-0.545f,-0.385f);
-    glVertex2f(-0.57f,-0.45f);//
     glVertex2f(-0.57f,-0.45f);
-    glVertex2f(-0.575f,-0.5f);//
+    glVertex2f(-0.57f,-0.45f);
     glVertex2f(-0.575f,-0.5f);
-    glVertex2f(-0.58f,-0.53f);//
+    glVertex2f(-0.575f,-0.5f);
     glVertex2f(-0.58f,-0.53f);
-    glVertex2f(-0.57f,-0.55f);//
+    glVertex2f(-0.58f,-0.53f);
     glVertex2f(-0.57f,-0.55f);
-    glVertex2f(-0.48f,-0.53f);//
+    glVertex2f(-0.57f,-0.55f);
+    glVertex2f(-0.48f,-0.53f);
     glEnd();
 
     glBegin(GL_POLYGON);
@@ -1456,6 +1676,7 @@ void well1()            //Well for Night View
      glVertex2f(-0.8f,-0.325f);
      glVertex2f(-0.85f,-0.33f);
     glEnd();
+
     glBegin(GL_POLYGON);
     glColor3ub(194, 194, 163);
     glVertex2f(-0.59f,-0.43f);
@@ -1481,7 +1702,7 @@ void StartingText()
         }
         else glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, text[i]);
     }
-    sprintf(text,"  PRESS D FOR DAY VIEW,PRESS N FOR NIGHT VIEW",5.00,8.00);
+    sprintf(text,"  PRESS D FOR DAY VIEW , PRESS N FOR NIGHT VIEW",5.00,8.00);
     glColor3f(0, 0, 0);
     glRasterPos2f( -100 , 0 );
     for(int i = 0; text[i] != '\0'; i++)
@@ -1505,7 +1726,7 @@ void StartingText()
         }
         else glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_10, text[i]);
     }
-        sprintf(text,"  Tamim & Sajid",5.00,8.00);
+        sprintf(text,"  Tamim , Sajid & Avilash",5.00,8.00);
     glColor3f(0, 0, 0);
     glRasterPos2f( -100 , 0 );
     for(int i = 0; text[i] != '\0'; i++)
@@ -1537,6 +1758,7 @@ void DrawSphere()
     boat4();
     boat3();
     hut1();
+    tree();
     fence();
     grass4();
     grass5();
@@ -1593,6 +1815,7 @@ void display1(void)
     way();
     boat2();
     fence();
+    tree();
     ground();
     well();
     hut();
@@ -1644,6 +1867,7 @@ void display() {
     way();
     boat2();
     fence();
+    tree();
     well();
     hut();
 	glFlush();
